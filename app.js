@@ -9,6 +9,13 @@ document.addEventListener('DOMContentLoaded', () => {
   // Handle hash routing
   const hash = window.location.hash.replace('#', '') || 'home';
   navigate(hash, false);
+
+  // Fix all nav-item clicks to prevent href="#" from clearing hash
+  document.querySelectorAll('.nav-item').forEach(el => {
+    el.addEventListener('click', function(e) {
+      e.preventDefault();
+    });
+  });
   
   // Keyboard shortcut for search
   document.addEventListener('keydown', e => {
@@ -31,6 +38,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
 // ── NAVIGATION ────────────────────────────────────────
 function navigate(pageId, pushState = true) {
+  if (!pageId || pageId === '#') pageId = 'home';
   const page = PAGES[pageId] || PAGES['home'];
   currentPage = pageId;
 
@@ -65,7 +73,9 @@ function navigate(pageId, pushState = true) {
 
 window.addEventListener('popstate', e => {
   const pageId = (e.state && e.state.page) || window.location.hash.replace('#', '') || 'home';
-  navigate(pageId, false);
+  if (pageId !== currentPage) {
+    navigate(pageId, false);
+  }
 });
 
 // ── RENDER ────────────────────────────────────────────
