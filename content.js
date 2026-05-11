@@ -1454,6 +1454,86 @@ home: {
   `
 },
 
+'messages': {
+  title: 'Messages',
+  badge: 'Consultant App',
+  lead: 'Direct messaging between consultant and client — visible on both the consultant app and client portal.',
+  content: `
+    <h2>How it works</h2>
+    <p>Messages are tied to a specific case. The consultant sends from the Messages tab inside the case. The client reads and replies from the Messages page in their portal. Both sides update automatically every 5 seconds — no refresh needed.</p>
+
+    <h2>Sending a message (consultant)</h2>
+    <div class="steps">
+      <div class="step"><div class="step-num">1</div><div class="step-content"><div class="step-title">Open a case</div><div class="step-body">Go to Cases and click on any case.</div></div></div>
+      <div class="step"><div class="step-num">2</div><div class="step-content"><div class="step-title">Click the Messages tab</div><div class="step-body">The 8th tab in the case view. All previous messages load automatically.</div></div></div>
+      <div class="step"><div class="step-num">3</div><div class="step-content"><div class="step-title">Type and send</div><div class="step-body">Type your message and press Enter or click Send. Shift+Enter adds a new line. The client receives an email notification immediately.</div></div></div>
+    </div>
+
+    <h2>Receiving and replying (client)</h2>
+    <p>Your client logs into portal.casvault.com and clicks <strong>Messages</strong> in the sidebar. They see the full conversation and can reply directly. You receive an email notification when they reply.</p>
+
+    <h2>Auto-updating</h2>
+    <p>Both sides poll for new messages every 5 seconds. When a new message arrives it appears automatically without any action needed — no refresh, no manual reload.</p>
+
+    <h2>Read receipts</h2>
+    <p>When the client opens the Messages page, all consultant messages are marked as read. You will see "Read" next to messages the client has seen.</p>
+
+    <div class="callout callout-tip">
+      <div class="callout-icon">💡</div>
+      <div class="callout-content">
+        <div class="callout-title">Use messages for quick updates</div>
+        <div class="callout-body">Messages are ideal for quick back-and-forth — "please upload your bank statement", "your reference letter has been approved", "we are filing on Thursday". For formal communications, use the Comms log tab to record calls and meetings.</div>
+      </div>
+    </div>
+  `
+},
+
+'team': {
+  title: 'Team',
+  badge: 'Consultant App',
+  lead: 'Invite colleagues to help manage cases and clients under your account.',
+  content: `
+    <h2>Team roles</h2>
+    <div class="doc-table-wrapper">
+      <table class="doc-table">
+        <thead><tr><th>Role</th><th>Access</th></tr></thead>
+        <tbody>
+          <tr><td><strong>Admin</strong></td><td>Full access to everything except billing. Can manage clients, cases, invoices, settings, and team members.</td></tr>
+          <tr><td><strong>Case Manager</strong></td><td>Can manage cases — create, edit, update status, manage checklist and timeline, upload documents.</td></tr>
+          <tr><td><strong>Viewer</strong></td><td>Read-only access. Can view clients, cases, and documents but cannot make changes.</td></tr>
+        </tbody>
+      </table>
+    </div>
+
+    <h2>Inviting a team member</h2>
+    <div class="steps">
+      <div class="step"><div class="step-num">1</div><div class="step-content"><div class="step-title">Go to Team in the sidebar</div><div class="step-body">Click the Team nav item at the bottom of the sidebar.</div></div></div>
+      <div class="step"><div class="step-num">2</div><div class="step-content"><div class="step-title">Click Invite member</div><div class="step-body">A modal opens with fields for email, first name, last name, and role.</div></div></div>
+      <div class="step"><div class="step-num">3</div><div class="step-content"><div class="step-title">Select a role</div><div class="step-body">Choose Admin, Case Manager, or Viewer based on what the person needs to do.</div></div></div>
+      <div class="step"><div class="step-num">4</div><div class="step-content"><div class="step-title">Send invite</div><div class="step-body">An invitation email is sent with a link to set their password. The link expires in 7 days.</div></div></div>
+    </div>
+
+    <h2>Accepting an invitation</h2>
+    <p>Your team member clicks the link in their email, which takes them to <code>app.casvault.com/join-team?token=...</code>. They set a password and their account is activated. They can then log in with their email and new password.</p>
+
+    <h2>Managing the team</h2>
+    <ul>
+      <li><strong>Change role</strong> — Use the role dropdown next to any active team member</li>
+      <li><strong>Resend invite</strong> — Click the refresh icon next to any pending member</li>
+      <li><strong>Remove member</strong> — Click the trash icon to remove a member from your team</li>
+    </ul>
+
+    <div class="callout callout-warn">
+      <div class="callout-icon">⚠</div>
+      <div class="callout-content">
+        <div class="callout-title">Invitation expiry</div>
+        <div class="callout-body">Invitations expire after 7 days. If a team member does not accept in time, use the Resend button to generate a new invite.</div>
+      </div>
+    </div>
+  `
+},
+
+
 'changelog': {
   title: 'Changelog',
   badge: 'Reference',
@@ -1461,9 +1541,22 @@ home: {
   content: `
     <div class="changelog-version">
       <div class="changelog-version-header">
+        <div class="changelog-version-num">v1.6</div>
+        <div class="changelog-version-date">May 11, 2026</div>
+        <div class="changelog-version-badge">Latest</div>
+      </div>
+      <div class="changelog-item"><div class="changelog-dot feat"></div><div class="changelog-text"><strong>Portal messaging thread</strong> — real-time chat between consultant and client, auto-updates every 5 seconds on both sides</div></div>
+      <div class="changelog-item"><div class="changelog-dot feat"></div><div class="changelog-text"><strong>2FA login enforcement</strong> — accounts with 2FA enabled now require TOTP code on every login</div></div>
+      <div class="changelog-item"><div class="changelog-dot feat"></div><div class="changelog-text"><strong>Multi-staff team roles</strong> — invite team members with Admin, Case Manager, or Viewer roles</div></div>
+      <div class="changelog-item"><div class="changelog-dot feat"></div><div class="changelog-text"><strong>docs.casvault.com</strong> — full product documentation site with search, dark mode, 30 pages</div></div>
+      <div class="changelog-item"><div class="changelog-dot fix"></div><div class="changelog-text"><strong>Consultant sidebar</strong> — now stays fixed while content scrolls</div></div>
+      <div class="changelog-item"><div class="changelog-dot fix"></div><div class="changelog-text">Multiple Prisma schema, TypeScript, and layout bug fixes</div></div>
+    </div>
+
+    <div class="changelog-version">
+      <div class="changelog-version-header">
         <div class="changelog-version-num">v1.5</div>
         <div class="changelog-version-date">May 10, 2026</div>
-        <div class="changelog-version-badge">Latest</div>
       </div>
       <div class="changelog-item"><div class="changelog-dot feat"></div><div class="changelog-text"><strong>22 visa type templates</strong> — EB-1A, NIW, UK Global Talent, Innovator Founder, Canada Express Entry and PNP, Dubai Golden Visa, Australia Global Talent, Germany EU Blue Card, Schengen, and more</div></div>
       <div class="changelog-item"><div class="changelog-dot feat"></div><div class="changelog-text"><strong>Task management</strong> — per-case tasks with priority, due date, status, and assignee</div></div>
