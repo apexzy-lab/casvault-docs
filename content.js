@@ -1534,6 +1534,88 @@ home: {
 },
 
 
+'signup-security': {
+  title: 'Signup Security',
+  badge: 'Security',
+  lead: 'Every CaseVault account goes through 7 security gates before gaining dashboard access. This page explains each layer.',
+  content: `
+    <h2>Why we enforce this</h2>
+    <p>CaseVault handles immigration files — passports, financial records, personal history. We have a responsibility to ensure only legitimate immigration professionals access the platform. Quacks, fraudsters, and bad actors are not welcome.</p>
+
+    <h2>The 7 security gates</h2>
+    <div class="doc-table-wrapper">
+      <table class="doc-table">
+        <thead><tr><th>#</th><th>Check</th><th>What happens if it fails</th></tr></thead>
+        <tbody>
+          <tr><td><strong>1</strong></td><td>Rate limit — max 3 registrations per IP per hour</td><td>HTTP 429 — Too many requests</td></tr>
+          <tr><td><strong>2</strong></td><td>Terms of Service acceptance required</td><td>Cannot proceed without checking the box</td></tr>
+          <tr><td><strong>3</strong></td><td>Business email only — 70+ free providers blocked</td><td>Error: Please use your work email</td></tr>
+          <tr><td><strong>4</strong></td><td>Password: min 10 chars, 1 uppercase, 1 number</td><td>Error with specific requirement not met</td></tr>
+          <tr><td><strong>5</strong></td><td>Duplicate email check</td><td>Error: Email already registered</td></tr>
+          <tr><td><strong>6</strong></td><td>Suspicious domain detection</td><td>Account created but flagged for admin review</td></tr>
+          <tr><td><strong>7</strong></td><td>Email verification — 6-digit code, 24h expiry</td><td>Account locked until code confirmed</td></tr>
+        </tbody>
+      </table>
+    </div>
+
+    <h2>The 3-step registration flow</h2>
+    <div class="steps">
+      <div class="step">
+        <div class="step-num">1</div>
+        <div class="step-content">
+          <div class="step-title">Register</div>
+          <div class="step-body">Fill in company name, name, work email, password, practice type, bio, and accept the Terms of Service. A 6-digit verification code is sent to your email.</div>
+        </div>
+      </div>
+      <div class="step">
+        <div class="step-num">2</div>
+        <div class="step-content">
+          <div class="step-title">Verify your email</div>
+          <div class="step-body">Enter the 6-digit code from your email. The code expires in 24 hours. Click Resend if you don't receive it — check spam first.</div>
+        </div>
+      </div>
+      <div class="step">
+        <div class="step-num">3</div>
+        <div class="step-content">
+          <div class="step-title">Set up two-factor authentication</div>
+          <div class="step-body">Scan the QR code with Google Authenticator or Authy. Enter the 6-digit code to confirm. 2FA is mandatory — it cannot be skipped. Your account is now active.</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="callout callout-tip">
+      <div class="callout-icon">💡</div>
+      <div class="callout-content">
+        <div class="callout-title">Why 2FA is mandatory</div>
+        <div class="callout-body">Immigration files contain passport numbers, financial records, and family history. A compromised account could expose your clients to identity theft. 2FA makes account takeover extremely difficult even if your password is leaked.</div>
+      </div>
+    </div>
+
+    <h2>Blocked email providers</h2>
+    <p>The following types of email providers are blocked. You must use a custom domain email (e.g. you@yourfirm.com):</p>
+    <ul>
+      <li>Free consumer email — Gmail, Yahoo, Hotmail, Outlook, iCloud, AOL</li>
+      <li>Privacy email — ProtonMail, Tutanota, Mailfence</li>
+      <li>Temporary/disposable email — Mailinator, Guerrilla Mail, YOPmail, TrashMail</li>
+      <li>Generic webmail — mail.com, GMX, web.de</li>
+    </ul>
+
+    <div class="callout callout-warn">
+      <div class="callout-icon">⚠</div>
+      <div class="callout-content">
+        <div class="callout-title">Don't have a business email?</div>
+        <div class="callout-body">Register a domain for your practice (as low as $10/year) and set up Google Workspace or Zoho Mail. This also makes you look more professional to clients. Contact support@casvault.com if you need help.</div>
+      </div>
+    </div>
+
+    <h2>Login anomaly alerts</h2>
+    <p>Every time you log in from a new IP address, CaseVault sends you an email: "New login detected on your CaseVault account." This includes the time and IP address. If you don't recognise the login, go to Settings → Active Sessions and revoke all other sessions immediately, then change your password.</p>
+
+    <h2>Admin account review</h2>
+    <p>New accounts are reviewed by the CaseVault team within 24 hours. Accounts with suspicious domains are automatically flagged for priority review. You will receive an email when your account is approved. During the review period your account is fully functional.</p>
+  `
+},
+
 'changelog': {
   title: 'Changelog',
   badge: 'Reference',
@@ -1551,6 +1633,33 @@ home: {
       <div class="changelog-item"><div class="changelog-dot feat"></div><div class="changelog-text"><strong>docs.casvault.com</strong> — full product documentation site with search, dark mode, 30 pages</div></div>
       <div class="changelog-item"><div class="changelog-dot fix"></div><div class="changelog-text"><strong>Consultant sidebar</strong> — now stays fixed while content scrolls</div></div>
       <div class="changelog-item"><div class="changelog-dot fix"></div><div class="changelog-text">Multiple Prisma schema, TypeScript, and layout bug fixes</div></div>
+    </div>
+
+    <div class="changelog-version">
+      <div class="changelog-version-header">
+        <div class="changelog-version-num">v1.8</div>
+        <div class="changelog-version-date">May 15, 2026</div>
+      </div>
+      <div class="changelog-item"><div class="changelog-dot feat"></div><div class="changelog-text"><strong>Business email enforcement</strong> — 70+ free/disposable providers blocked. No Gmail, Yahoo, Outlook, iCloud etc.</div></div>
+      <div class="changelog-item"><div class="changelog-dot feat"></div><div class="changelog-text"><strong>Email verification</strong> — 6-digit code sent on signup, account locked until verified</div></div>
+      <div class="changelog-item"><div class="changelog-dot feat"></div><div class="changelog-text"><strong>Forced 2FA setup</strong> — every new account must scan QR and confirm TOTP before dashboard access</div></div>
+      <div class="changelog-item"><div class="changelog-dot feat"></div><div class="changelog-text"><strong>Password strength requirements</strong> — min 10 chars, uppercase + number, visual strength meter</div></div>
+      <div class="changelog-item"><div class="changelog-dot feat"></div><div class="changelog-text"><strong>Terms of Service acceptance</strong> — logged with timestamp for GDPR compliance</div></div>
+      <div class="changelog-item"><div class="changelog-dot feat"></div><div class="changelog-text"><strong>Login anomaly detection</strong> — email alert when login from new IP address</div></div>
+      <div class="changelog-item"><div class="changelog-dot feat"></div><div class="changelog-text"><strong>Suspicious domain flagging</strong> — uncommon TLDs auto-flagged for admin review</div></div>
+      <div class="changelog-item"><div class="changelog-dot feat"></div><div class="changelog-text"><strong>Admin review queue</strong> — approve/reject/flag new accounts with email notification</div></div>
+      <div class="changelog-item"><div class="changelog-dot feat"></div><div class="changelog-text"><strong>Professional bio + practice type</strong> — collected on signup, shown on intake forms</div></div>
+      <div class="changelog-item"><div class="changelog-dot feat"></div><div class="changelog-text"><strong>Getting started guide</strong> — 6-step onboarding checklist with progress bar on dashboard</div></div>
+      <div class="changelog-item"><div class="changelog-dot feat"></div><div class="changelog-text"><strong>Welcome email</strong> — sent after 2FA setup with 3-step getting started guide</div></div>
+      <div class="changelog-item"><div class="changelog-dot fix"></div><div class="changelog-text">Country dropdown added to Settings, practice type and bio fields added</div></div>
+    </div>
+
+    <div class="changelog-version">
+      <div class="changelog-version-header">
+        <div class="changelog-version-num">v1.6</div>
+        <div class="changelog-version-date">May 11, 2026</div>
+      </div>
+      <div class="changelog-item"><div class="changelog-dot feat"></div><div class="changelog-text">Portal messaging, 2FA login enforcement, team roles, docs site</div></div>
     </div>
 
     <div class="changelog-version">
