@@ -4,28 +4,28 @@ home: {
   title: 'CaseVault Documentation',
   content: `
     <div class="home-hero">
-      <div class="home-hero-badge">📚 Documentation v1.5</div>
+      <div class="home-hero-badge">📚 Documentation v1.8</div>
       <div class="home-hero-title">CaseVault <span>Documentation</span></div>
       <div class="home-hero-subtitle">Everything you need to manage immigration cases, clients, documents, and payments — for consultants and their clients.</div>
       <div class="home-hero-actions">
-        <a href="#" onclick="navigate('quick-start')" class="btn-primary">Get started →</a>
+        <a href="javascript:void(0)" onclick="navigate('quick-start')" class="btn-primary">Get started →</a>
         <a href="https://app.casvault.com" target="_blank" class="btn-secondary">Open app</a>
       </div>
     </div>
 
     <div class="home-section-title">Start here</div>
     <div class="home-cards">
-      <a href="#" onclick="navigate('quick-start')" class="home-card">
+      <a href="javascript:void(0)" onclick="navigate('quick-start')" class="home-card">
         <div class="home-card-icon">🚀</div>
         <div class="home-card-title">Quick start guide</div>
         <div class="home-card-body">Create your account, add your first client, and open a case in under 5 minutes.</div>
       </a>
-      <a href="#" onclick="navigate('cases')" class="home-card">
+      <a href="javascript:void(0)" onclick="navigate('cases')" class="home-card">
         <div class="home-card-icon">📁</div>
         <div class="home-card-title">Managing cases</div>
         <div class="home-card-body">Track applications from lead to approval with visa-specific checklists and timelines.</div>
       </a>
-      <a href="#" onclick="navigate('portal-overview')" class="home-card">
+      <a href="javascript:void(0)" onclick="navigate('portal-overview')" class="home-card">
         <div class="home-card-icon">🌐</div>
         <div class="home-card-title">Client portal guide</div>
         <div class="home-card-body">How your clients track their case, upload documents, and pay invoices.</div>
@@ -34,35 +34,64 @@ home: {
 
     <div class="home-section-title">Explore by section</div>
     <div class="home-cards">
-      <a href="#" onclick="navigate('clients')" class="home-card">
+      <a href="javascript:void(0)" onclick="navigate('clients')" class="home-card">
         <div class="home-card-icon">👥</div>
         <div class="home-card-title">Clients</div>
         <div class="home-card-body">Add, import, and manage your client profiles with passport and contact details.</div>
       </a>
-      <a href="#" onclick="navigate('intake-forms')" class="home-card">
+      <a href="javascript:void(0)" onclick="navigate('intake-forms')" class="home-card">
         <div class="home-card-icon">📋</div>
         <div class="home-card-title">Intake Forms</div>
         <div class="home-card-body">Send branded forms to prospects. Submissions auto-create client profiles.</div>
       </a>
-      <a href="#" onclick="navigate('invoices')" class="home-card">
+      <a href="javascript:void(0)" onclick="navigate('invoices')" class="home-card">
         <div class="home-card-icon">💰</div>
         <div class="home-card-title">Invoices & Payments</div>
         <div class="home-card-body">Create invoices and collect payments via Paystack (Nigeria) or Dodo Payments.</div>
       </a>
-      <a href="#" onclick="navigate('gov-status')" class="home-card">
+      <a href="javascript:void(0)" onclick="navigate('gov-status')" class="home-card">
         <div class="home-card-icon">🏛️</div>
         <div class="home-card-title">Gov. Case Status</div>
         <div class="home-card-body">Track USCIS, UKVI, and IRCC application status automatically.</div>
       </a>
-      <a href="#" onclick="navigate('visa-us')" class="home-card">
+      <a href="javascript:void(0)" onclick="navigate('visa-us')" class="home-card">
         <div class="home-card-icon">🇺🇸</div>
         <div class="home-card-title">US Visa Types</div>
         <div class="home-card-body">EB-1A, NIW, O-1A, H-1B, F-1, B1/B2 — checklists and timelines.</div>
       </a>
-      <a href="#" onclick="navigate('security')" class="home-card">
+      <a href="javascript:void(0)" onclick="navigate('security')" class="home-card">
         <div class="home-card-icon">🔒</div>
         <div class="home-card-title">Security</div>
         <div class="home-card-body">2FA, session management, and how we protect your client data.</div>
+      </a>
+    </div>
+
+    <div class="home-section-title">New in v1.8</div>
+    <div class="home-cards">
+      <a href="javascript:void(0)" onclick="navigate('invoice-customization')" class="home-card">
+        <div class="home-card-icon">🔢</div>
+        <div class="home-card-title">Invoice numbering</div>
+        <div class="home-card-body">Set a custom prefix — MIGRZ-2026-001 instead of INV-2026-001.</div>
+      </a>
+      <a href="javascript:void(0)" onclick="navigate('fee-agreement')" class="home-card">
+        <div class="home-card-icon">📄</div>
+        <div class="home-card-title">Fee agreements</div>
+        <div class="home-card-body">Generate a professional PDF fee agreement for any case in one click.</div>
+      </a>
+      <a href="javascript:void(0)" onclick="navigate('whatsapp-updates')" class="home-card">
+        <div class="home-card-icon">💬</div>
+        <div class="home-card-title">WhatsApp updates</div>
+        <div class="home-card-body">Copy a formatted case update for WhatsApp with one click. No API needed.</div>
+      </a>
+      <a href="javascript:void(0)" onclick="navigate('testimonial-requests')" class="home-card">
+        <div class="home-card-icon">⭐</div>
+        <div class="home-card-title">Testimonial requests</div>
+        <div class="home-card-body">Auto-send a Google review request when a case is approved.</div>
+      </a>
+      <a href="javascript:void(0)" onclick="navigate('signup-security')" class="home-card">
+        <div class="home-card-icon">🛡️</div>
+        <div class="home-card-title">Signup security</div>
+        <div class="home-card-body">Business email only, 2FA required, admin review queue — all new accounts verified.</div>
       </a>
     </div>
   `
@@ -177,10 +206,10 @@ home: {
 
     <h2>Next steps</h2>
     <ul>
-      <li><a href="#" onclick="navigate('intake-forms')">Set up an intake form</a> to auto-capture prospect details</li>
-      <li><a href="#" onclick="navigate('invoices')">Create your first invoice</a></li>
-      <li><a href="#" onclick="navigate('gov-status')">Track a USCIS receipt number</a></li>
-      <li><a href="#" onclick="navigate('two-factor')">Enable 2FA</a> for account security</li>
+      <li><a href="javascript:void(0)" onclick="navigate('intake-forms')">Set up an intake form</a> to auto-capture prospect details</li>
+      <li><a href="javascript:void(0)" onclick="navigate('invoices')">Create your first invoice</a></li>
+      <li><a href="javascript:void(0)" onclick="navigate('gov-status')">Track a USCIS receipt number</a></li>
+      <li><a href="javascript:void(0)" onclick="navigate('two-factor')">Enable 2FA</a> for account security</li>
     </ul>
   `
 },
@@ -610,7 +639,7 @@ home: {
       <div class="callout-icon">💡</div>
       <div class="callout-content">
         <div class="callout-title">Payment processors</div>
-        <div class="callout-body">Nigerian clients pay via Paystack (NGN, local cards and bank transfers). International clients pay via Dodo Payments (USD, international cards). Go to <a href="#" onclick="navigate('billing')">Billing</a> to configure your processor.</div>
+        <div class="callout-body">Nigerian clients pay via Paystack (NGN, local cards and bank transfers). International clients pay via Dodo Payments (USD, international cards). Go to <a href="javascript:void(0)" onclick="navigate('billing')">Billing</a> to configure your processor.</div>
       </div>
     </div>
   `
@@ -698,10 +727,10 @@ home: {
     <p>Enter your current password and a new password (minimum 8 characters). Changing your password automatically signs out all other active sessions.</p>
 
     <h2>Two-Factor Authentication</h2>
-    <p>See the <a href="#" onclick="navigate('two-factor')">2FA documentation</a> for a full guide.</p>
+    <p>See the <a href="javascript:void(0)" onclick="navigate('two-factor')">2FA documentation</a> for a full guide.</p>
 
     <h2>Active Sessions</h2>
-    <p>See the <a href="#" onclick="navigate('sessions')">Sessions documentation</a> for a full guide.</p>
+    <p>See the <a href="javascript:void(0)" onclick="navigate('sessions')">Sessions documentation</a> for a full guide.</p>
 
     <div class="callout callout-tip">
       <div class="callout-icon">💡</div>
@@ -1745,8 +1774,8 @@ home: {
     <ul>
       <li>Hard refresh your browser with <code>Ctrl+Shift+R</code> (Windows) or <code>Cmd+Shift+R</code> (Mac)</li>
       <li>Check you're using an up-to-date version of Chrome, Firefox, or Safari</li>
-      <li>Check the <a href="#" onclick="navigate('faq')">FAQ</a> for common issues</li>
-      <li>Check the <a href="#" onclick="navigate('changelog')">Changelog</a> for recent changes</li>
+      <li>Check the <a href="javascript:void(0)" onclick="navigate('faq')">FAQ</a> for common issues</li>
+      <li>Check the <a href="javascript:void(0)" onclick="navigate('changelog')">Changelog</a> for recent changes</li>
     </ul>
 
     <h2>Reporting a bug</h2>
@@ -1793,7 +1822,7 @@ home: {
     <p>A welcome screen shows a simple 3-step getting started guide: add a client → open a case → track progress.</p>
 
     <h2>Skipping the wizard</h2>
-    <p>The wizard only appears when your <code>firstName</code> field is empty. Once you complete it (or update your profile in Settings), it won't appear again. You can update all these settings at any time in <a href="#" onclick="navigate('settings')">Settings</a>.</p>
+    <p>The wizard only appears when your <code>firstName</code> field is empty. Once you complete it (or update your profile in Settings), it won't appear again. You can update all these settings at any time in <a href="javascript:void(0)" onclick="navigate('settings')">Settings</a>.</p>
   `
 },
 
@@ -1851,7 +1880,7 @@ home: {
       <li><strong>International</strong> — Pay in USD via Dodo Payments (international cards)</li>
     </ul>
 
-    <p>You can toggle between processors on the <a href="#" onclick="navigate('billing')">Billing page</a>.</p>
+    <p>You can toggle between processors on the <a href="javascript:void(0)" onclick="navigate('billing')">Billing page</a>.</p>
 
     <div class="callout callout-tip">
       <div class="callout-icon">💡</div>
@@ -1862,5 +1891,111 @@ home: {
     </div>
   `
 }
+
+'invoice-customization': {
+  title: 'Invoice Number Customization',
+  badge: 'Invoices',
+  lead: 'Set a custom prefix for all your invoice numbers — e.g. MIGRZ-2026-0001 instead of INV-2026-0001.',
+  content: `
+    <h2>Setting your invoice prefix</h2>
+    <p>Go to <strong>Settings → Profile</strong> and scroll to the <strong>Invoice number prefix</strong> field. Enter up to 10 alphanumeric characters. This prefix will be used on all new invoices you create.</p>
+    <div class="doc-table-wrapper">
+      <table class="doc-table">
+        <thead><tr><th>Prefix setting</th><th>Example invoice number</th></tr></thead>
+        <tbody>
+          <tr><td>(blank)</td><td>INV-2026-4821</td></tr>
+          <tr><td>MIGRZ</td><td>MIGRZ-2026-4821</td></tr>
+          <tr><td>LAW</td><td>LAW-2026-4821</td></tr>
+          <tr><td>CV</td><td>CV-2026-4821</td></tr>
+        </tbody>
+      </table>
+    </div>
+    <div class="callout callout-tip">
+      <div class="callout-icon">💡</div>
+      <div class="callout-content">
+        <div class="callout-title">Only affects new invoices</div>
+        <div class="callout-body">Changing your prefix does not rename existing invoices. Only invoices created after saving the setting will use the new prefix.</div>
+      </div>
+    </div>
+    <h2>Format</h2>
+    <p>Letters and numbers only. Max 10 characters. The format is always <code>PREFIX-YEAR-SEQUENCE</code> e.g. <code>MIGRZ-2026-4821</code>.</p>
+  `
+},
+
+'fee-agreement': {
+  title: 'Fee Agreement Generator',
+  badge: 'Cases',
+  lead: 'Generate a professional PDF fee agreement for any case — pre-filled with client and consultant details, visa type, and standard terms.',
+  content: `
+    <h2>Generating a fee agreement</h2>
+    <p>Open any case and click the <strong>Fee Agreement</strong> button in the case header, next to the Delete Case button. A PDF will download immediately — no configuration needed.</p>
+    <h2>What the PDF includes</h2>
+    <ul>
+      <li>Consultant name, company, email, and phone</li>
+      <li>Client name, nationality, passport number, and email</li>
+      <li>Visa type and case reference number</li>
+      <li>8 standard terms and conditions</li>
+      <li>Signature blocks for both parties with date lines</li>
+      <li>Generated-by footer with consultant name and date</li>
+    </ul>
+    <h2>Customising the terms</h2>
+    <p>The standard terms cover the most common requirements for immigration consulting engagements. If you need custom terms, download the PDF and edit it in Adobe Acrobat or Word before sending to the client.</p>
+    <div class="callout callout-tip">
+      <div class="callout-icon">💡</div>
+      <div class="callout-content">
+        <div class="callout-title">Send before starting work</div>
+        <div class="callout-body">Best practice is to send the fee agreement as soon as a case is created and collect a signed copy before beginning any work on the application.</div>
+      </div>
+    </div>
+  `
+},
+
+'whatsapp-updates': {
+  title: 'WhatsApp Case Updates',
+  badge: 'Communication',
+  lead: 'Copy a pre-formatted WhatsApp message for any case with one click. No API needed.',
+  content: `
+    <h2>How it works</h2>
+    <p>Open any case and click the green <strong>Copy for WhatsApp</strong> button in the case header. A formatted message is copied to your clipboard. Open WhatsApp and paste it into your client's chat.</p>
+    <h2>What the message includes</h2>
+    <div class="code-block">*Case Update — Sarah Johnson*
+Case: CV-2631 | UK Global Talent Visa
+Status: *Active*
+Progress: 43% complete
+Deadline: 30 June 2026
+
+Please log in to your portal to view the latest updates and upload any pending documents.
+Portal: https://portal.casvault.com</div>
+    <p>The <code>*asterisks*</code> render as <strong>bold text</strong> natively in WhatsApp.</p>
+    <div class="callout callout-tip">
+      <div class="callout-icon">💡</div>
+      <div class="callout-content">
+        <div class="callout-title">Tip — personalise before sending</div>
+        <div class="callout-body">Paste the message into WhatsApp then add a personal note before sending — e.g. what the client needs to do next or when you will follow up.</div>
+      </div>
+    </div>
+  `
+},
+
+'testimonial-requests': {
+  title: 'Testimonial Requests',
+  badge: 'Growth',
+  lead: 'When a case is approved, CaseVault automatically sends the client an email asking for a Google review.',
+  content: `
+    <h2>How it works</h2>
+    <p>When you change a case status to <strong>Approved</strong>, CaseVault sends an automatic email to the client with a Google Review link. The email comes from your consultant name — not CaseVault branding.</p>
+    <h2>What the email says</h2>
+    <p>The email congratulates the client on their approval and asks them to take 2 minutes to leave a Google review. It mentions your practice name and links directly to your Google review page.</p>
+    <div class="callout callout-warn">
+      <div class="callout-icon">⚠</div>
+      <div class="callout-content">
+        <div class="callout-title">Update your Google review link</div>
+        <div class="callout-body">Contact support@casvault.com to set your custom Google review URL. By default it uses a placeholder link. You can find your Google review link in your Google Business Profile dashboard.</div>
+      </div>
+    </div>
+    <h2>When it fires</h2>
+    <p>The email only sends once — on the first transition to Approved status. If you accidentally change status to approved and back, it will not resend on the next approval change.</p>
+  `
+},
 
 };
