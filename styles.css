@@ -11,10 +11,11 @@
   --text-secondary: #374151;
   --text-muted: #6b7280;
   --text-faint: #9ca3af;
-  --accent: #2563eb;
-  --accent-light: #eff6ff;
-  --accent-border: #bfdbfe;
-  --accent-hover: #1d4ed8;
+  --accent: #001638;
+  --crimson: #D5002E;
+  --accent-light: #E8EDF5;
+  --accent-border: #8FA3C0;
+  --accent-hover: #001E4A;
   --green: #16a34a;
   --green-light: #f0fdf4;
   --amber: #d97706;
@@ -104,14 +105,16 @@ body {
   cursor: pointer;
 }
 .logo-icon {
-  width: 30px; height: 30px;
-  background: linear-gradient(135deg, #2563eb, #4f46e5);
+  width: 32px; height: 32px;
   border-radius: 8px;
-  display: flex; align-items: center; justify-content: center;
-  color: white;
-  font-size: 11px;
-  font-weight: 700;
+  overflow: hidden;
   flex-shrink: 0;
+  display: flex; align-items: center; justify-content: center;
+}
+.logo-icon img {
+  width: 32px; height: 32px;
+  object-fit: cover;
+  border-radius: 8px;
 }
 .logo-text { font-weight: 700; font-size: 15px; color: var(--text); }
 .logo-badge {
@@ -290,6 +293,8 @@ body {
   background: var(--accent-light);
   color: var(--accent);
   font-weight: 600;
+  border-left: 3px solid #D5002E;
+  padding-left: 10px;
 }
 .nav-item-home { font-weight: 600; color: var(--text-secondary); }
 
@@ -684,7 +689,7 @@ pre code { background: none; border: none; padding: 0; }
   border: none;
   display: inline-block;
 }
-.btn-primary:hover { background: var(--accent-hover); text-decoration: none; }
+.btn-primary:hover { background: #D5002E; text-decoration: none; }
 .btn-secondary {
   background: var(--bg-secondary);
   color: var(--text);

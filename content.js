@@ -1890,7 +1890,7 @@ home: {
       </div>
     </div>
   `
-}
+},
 
 'invoice-customization': {
   title: 'Invoice Number Customization',
@@ -1996,6 +1996,4 @@ Portal: https://portal.casvault.com</div>
     <h2>When it fires</h2>
     <p>The email only sends once — on the first transition to Approved status. If you accidentally change status to approved and back, it will not resend on the next approval change.</p>
   `
-},
-
 };
