@@ -93,6 +93,11 @@ home: {
         <div class="home-card-title">Signup security</div>
         <div class="home-card-body">Business email only, 2FA required, admin review queue — all new accounts verified.</div>
       </a>
+      <a href="javascript:void(0)" onclick="navigate('forms-auto-fill')" class="home-card">
+        <div class="home-card-icon">🗂️</div>
+        <div class="home-card-title">Form auto-fill</div>
+        <div class="home-card-body">Generate pre-filled I-140 petitions from client data. Docketwise-level feature built in.</div>
+      </a>
     </div>
   `
 },
@@ -1995,6 +2000,63 @@ Portal: https://portal.casvault.com</div>
     </div>
     <h2>When it fires</h2>
     <p>The email only sends once — on the first transition to Approved status. If you accidentally change status to approved and back, it will not resend on the next approval change.</p>
+  `
+}
+,
+'forms-auto-fill': {
+  title: 'Immigration Form Auto-Fill',
+  badge: 'Core Feature',
+  lead: 'CaseVault pre-fills official USCIS immigration forms from client data. Generate a completed I-140 in seconds instead of hours.',
+  content: `
+    <h2>How it works</h2>
+    <p>Open any case and click the <strong>Forms</strong> tab. Click <strong>Load forms</strong> to see available forms for that visa type. Click <strong>Generate PDF</strong> — CaseVault fills the form with client data and downloads it immediately.</p>
+
+    <div class="callout callout-warn">
+      <div class="callout-icon">⚠</div>
+      <div class="callout-content">
+        <div class="callout-title">Always review before filing</div>
+        <div class="callout-body">CaseVault generates draft PDFs only. Review every field before submitting to any government agency. Incorrect immigration forms can cause serious harm to clients.</div>
+      </div>
+    </div>
+
+    <h2>Available forms</h2>
+    <div class="doc-table-wrapper">
+      <table class="doc-table">
+        <thead><tr><th>Form</th><th>Name</th><th>Agency</th><th>Used for</th></tr></thead>
+        <tbody>
+          <tr><td><strong>I-140</strong></td><td>Immigrant Petition for Alien Workers</td><td>USCIS</td><td>EB-1A, NIW</td></tr>
+          <tr><td><strong>I-485</strong></td><td>Application for Permanent Residence</td><td>USCIS</td><td>Adjustment of status (mapping in progress)</td></tr>
+        </tbody>
+      </table>
+    </div>
+
+    <h2>What gets auto-filled on I-140</h2>
+    <ul>
+      <li>Petitioner name, company, email, phone</li>
+      <li>Beneficiary (client) full name, date of birth, nationality</li>
+      <li>Passport number and expiry date</li>
+      <li>Country of birth and citizenship</li>
+      <li>Mailing address</li>
+    </ul>
+
+    <h2>What still needs manual completion</h2>
+    <p>Some fields require data not yet collected in CaseVault. You will need to complete these manually in the PDF:</p>
+    <ul>
+      <li>Alien Registration Number (A-Number)</li>
+      <li>Social Security Number</li>
+      <li>I-94 Arrival/Departure number</li>
+      <li>Job title, SOC code, annual salary</li>
+      <li>Employer name and address</li>
+      <li>Petition type checkbox (EB-1A vs NIW)</li>
+    </ul>
+
+    <div class="callout callout-tip">
+      <div class="callout-icon">💡</div>
+      <div class="callout-content">
+        <div class="callout-title">Check the form edition</div>
+        <div class="callout-body">USCIS updates form editions periodically. The current I-140 is edition 06/07/24. Check uscis.gov/i-140 at the start of each filing season to verify you are using the current edition.</div>
+      </div>
+    </div>
   `
 }
 
