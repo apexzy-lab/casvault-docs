@@ -4,7 +4,7 @@ home: {
   title: 'CaseVault Documentation',
   content: `
     <div class="home-hero">
-      <div class="home-hero-badge">📚 Documentation v1.8</div>
+      <div class="home-hero-badge">📚 Documentation v1.8.1</div>
       <div class="home-hero-title">CaseVault <span>Documentation</span></div>
       <div class="home-hero-subtitle">Everything you need to manage immigration cases, clients, documents, and payments — for consultants and their clients.</div>
       <div class="home-hero-actions">
@@ -2040,15 +2040,13 @@ Portal: https://portal.casvault.com</div>
     </ul>
 
     <h2>What still needs manual completion</h2>
-    <p>Some fields require data not yet collected in CaseVault. You will need to complete these manually in the PDF:</p>
+    <p>These fields cannot be auto-filled and must be completed manually in the PDF:</p>
     <ul>
-      <li>Alien Registration Number (A-Number)</li>
-      <li>Social Security Number</li>
-      <li>I-94 Arrival/Departure number</li>
-      <li>Job title, SOC code, annual salary</li>
-      <li>Employer name and address</li>
-      <li>Petition type checkbox (EB-1A vs NIW)</li>
+      <li><strong>Part 2</strong> — Petition type checkbox (EB-1A vs NIW) — tick the correct box</li>
+      <li><strong>Part 5</strong> — Petitioner type checkbox (Employer / Self / Other)</li>
+      <li><strong>Signatures</strong> — Parts 8, 9, 10 require wet or digital signatures</li>
     </ul>
+    <p>All other data fields (name, DOB, passport, A-number, SSN, I-94, job title, SOC code, employer address, wages) are auto-filled from the client profile and case job details.</p>
 
     <div class="callout callout-tip">
       <div class="callout-icon">💡</div>
